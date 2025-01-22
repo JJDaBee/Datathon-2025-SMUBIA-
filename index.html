@@ -32,708 +32,688 @@
         <script>
             // Pre-given data for the network diagram
             const data = {
-    "nodes": [
-        {
-            "id": "mara-louise anzalone",
-            "name": "mara-louise anzalone"
-        },
-        {
-            "id": "starbucks",
-            "name": "starbucks"
-        },
-        {
-            "id": "national labor relations board",
-            "name": "national labor relations board"
-        },
-        {
-            "id": "board",
-            "name": "board"
-        },
-        {
-            "id": "nlrb",
-            "name": "nlrb"
-        },
-        {
-            "id": "su",
-            "name": "su"
-        },
-        {
-            "id": "su wenqiang",
-            "name": "su wenqiang"
-        },
-        {
-            "id": "bukit timah",
-            "name": "bukit timah"
-        },
-        {
-            "id": "european union",
-            "name": "european union"
-        },
-        {
-            "id": "the european data protection board",
-            "name": "the european data protection board"
-        },
-        {
-            "id": "meta",
-            "name": "meta"
-        },
-        {
-            "id": "eu",
-            "name": "eu"
-        },
-        {
-            "id": "the irish data protection commission",
-            "name": "the irish data protection commission"
-        },
-        {
-            "id": "the general data protection regulation",
-            "name": "the general data protection regulation"
-        },
-        {
-            "id": "chapter 5",
-            "name": "chapter 5"
-        },
-        {
-            "id": "zhang",
-            "name": "zhang"
-        },
-        {
-            "id": "zhang ruijin",
-            "name": "zhang ruijin"
-        },
-        {
-            "id": "liberty university",
-            "name": "liberty university"
-        },
-        {
-            "id": "the clery act",
-            "name": "the clery act"
-        },
-        {
-            "id": "the department of education",
-            "name": "the department of education"
-        },
-        {
-            "id": "kurz",
-            "name": "kurz"
-        },
-        {
-            "id": "the austrian people's party",
-            "name": "the austrian people's party"
-        },
-        {
-            "id": "sebastian kurz",
-            "name": "sebastian kurz"
-        },
-        {
-            "id": "didi",
-            "name": "didi"
-        },
-        {
-            "id": "jean liu",
-            "name": "jean liu"
-        },
-        {
-            "id": "didi global",
-            "name": "didi global"
-        },
-        {
-            "id": "the cyberspace administration of china",
-            "name": "the cyberspace administration of china"
-        },
-        {
-            "id": "liu qing",
-            "name": "liu qing"
-        },
-        {
-            "id": "cac",
-            "name": "cac"
-        },
-        {
-            "id": "cheng wei",
-            "name": "cheng wei"
-        },
-        {
-            "id": "alfredo h.",
-            "name": "alfredo h."
-        },
-        {
-            "id": "the brussels criminal court\u2019s",
-            "name": "the brussels criminal court\u2019s"
-        },
-        {
-            "id": "majorca",
-            "name": "majorca"
-        },
-        {
-            "id": "czk",
-            "name": "czk"
-        },
-        {
-            "id": "the chamber of deputies",
-            "name": "the chamber of deputies"
-        },
-        {
-            "id": "feri",
-            "name": "feri"
-        },
-        {
-            "id": "the prague metropolitan court",
-            "name": "the prague metropolitan court"
-        },
-        {
-            "id": "dominik feri",
-            "name": "dominik feri"
-        },
-        {
-            "id": "glostrup",
-            "name": "glostrup"
-        },
-        {
-            "id": "treasury",
-            "name": "treasury"
-        },
-        {
-            "id": "shah",
-            "name": "shah"
-        },
-        {
-            "id": "sanjay shah",
-            "name": "sanjay shah"
-        },
-        {
-            "id": "copenhagen",
-            "name": "copenhagen"
-        }
-    ],
-    "edges": [
-        {
-            "source": "mara-louise anzalone",
-            "target": "starbucks",
-            "weight": 1
-        },
-        {
-            "source": "mara-louise anzalone",
-            "target": "national labor relations board",
-            "weight": 1
-        },
-        {
-            "source": "mara-louise anzalone",
-            "target": "board",
-            "weight": 1
-        },
-        {
-            "source": "mara-louise anzalone",
-            "target": "nlrb",
-            "weight": 1
-        },
-        {
-            "source": "starbucks",
-            "target": "national labor relations board",
-            "weight": 1
-        },
-        {
-            "source": "starbucks",
-            "target": "board",
-            "weight": 1
-        },
-        {
-            "source": "starbucks",
-            "target": "nlrb",
-            "weight": 1
-        },
-        {
-            "source": "national labor relations board",
-            "target": "board",
-            "weight": 1
-        },
-        {
-            "source": "national labor relations board",
-            "target": "nlrb",
-            "weight": 1
-        },
-        {
-            "source": "board",
-            "target": "nlrb",
-            "weight": 1
-        },
-        {
-            "source": "su",
-            "target": "su wenqiang",
-            "weight": 1
-        },
-        {
-            "source": "su",
-            "target": "bukit timah",
-            "weight": 1
-        },
-        {
-            "source": "su wenqiang",
-            "target": "bukit timah",
-            "weight": 1
-        },
-        {
-            "source": "european union",
-            "target": "the european data protection board",
-            "weight": 1
-        },
-        {
-            "source": "european union",
-            "target": "meta",
-            "weight": 1
-        },
-        {
-            "source": "european union",
-            "target": "eu",
-            "weight": 1
-        },
-        {
-            "source": "european union",
-            "target": "the irish data protection commission",
-            "weight": 1
-        },
-        {
-            "source": "european union",
-            "target": "the general data protection regulation",
-            "weight": 1
-        },
-        {
-            "source": "european union",
-            "target": "chapter 5",
-            "weight": 1
-        },
-        {
-            "source": "the european data protection board",
-            "target": "meta",
-            "weight": 1
-        },
-        {
-            "source": "the european data protection board",
-            "target": "eu",
-            "weight": 1
-        },
-        {
-            "source": "the european data protection board",
-            "target": "the irish data protection commission",
-            "weight": 1
-        },
-        {
-            "source": "the european data protection board",
-            "target": "the general data protection regulation",
-            "weight": 1
-        },
-        {
-            "source": "the european data protection board",
-            "target": "chapter 5",
-            "weight": 1
-        },
-        {
-            "source": "meta",
-            "target": "eu",
-            "weight": 1
-        },
-        {
-            "source": "meta",
-            "target": "the irish data protection commission",
-            "weight": 1
-        },
-        {
-            "source": "meta",
-            "target": "the general data protection regulation",
-            "weight": 1
-        },
-        {
-            "source": "meta",
-            "target": "chapter 5",
-            "weight": 1
-        },
-        {
-            "source": "eu",
-            "target": "the irish data protection commission",
-            "weight": 1
-        },
-        {
-            "source": "eu",
-            "target": "the general data protection regulation",
-            "weight": 1
-        },
-        {
-            "source": "eu",
-            "target": "chapter 5",
-            "weight": 1
-        },
-        {
-            "source": "the irish data protection commission",
-            "target": "the general data protection regulation",
-            "weight": 1
-        },
-        {
-            "source": "the irish data protection commission",
-            "target": "chapter 5",
-            "weight": 1
-        },
-        {
-            "source": "the general data protection regulation",
-            "target": "chapter 5",
-            "weight": 1
-        },
-        {
-            "source": "zhang",
-            "target": "zhang ruijin",
-            "weight": 1
-        },
-        {
-            "source": "liberty university",
-            "target": "the clery act",
-            "weight": 1
-        },
-        {
-            "source": "liberty university",
-            "target": "the department of education",
-            "weight": 1
-        },
-        {
-            "source": "the clery act",
-            "target": "the department of education",
-            "weight": 1
-        },
-        {
-            "source": "kurz",
-            "target": "the austrian people's party",
-            "weight": 1
-        },
-        {
-            "source": "kurz",
-            "target": "sebastian kurz",
-            "weight": 1
-        },
-        {
-            "source": "the austrian people's party",
-            "target": "sebastian kurz",
-            "weight": 1
-        },
-        {
-            "source": "didi",
-            "target": "jean liu",
-            "weight": 1
-        },
-        {
-            "source": "didi",
-            "target": "didi global",
-            "weight": 1
-        },
-        {
-            "source": "didi",
-            "target": "the cyberspace administration of china",
-            "weight": 1
-        },
-        {
-            "source": "didi",
-            "target": "liu qing",
-            "weight": 1
-        },
-        {
-            "source": "didi",
-            "target": "cac",
-            "weight": 1
-        },
-        {
-            "source": "didi",
-            "target": "cheng wei",
-            "weight": 1
-        },
-        {
-            "source": "jean liu",
-            "target": "didi global",
-            "weight": 1
-        },
-        {
-            "source": "jean liu",
-            "target": "the cyberspace administration of china",
-            "weight": 1
-        },
-        {
-            "source": "jean liu",
-            "target": "liu qing",
-            "weight": 1
-        },
-        {
-            "source": "jean liu",
-            "target": "cac",
-            "weight": 1
-        },
-        {
-            "source": "jean liu",
-            "target": "cheng wei",
-            "weight": 1
-        },
-        {
-            "source": "didi global",
-            "target": "the cyberspace administration of china",
-            "weight": 1
-        },
-        {
-            "source": "didi global",
-            "target": "liu qing",
-            "weight": 1
-        },
-        {
-            "source": "didi global",
-            "target": "cac",
-            "weight": 1
-        },
-        {
-            "source": "didi global",
-            "target": "cheng wei",
-            "weight": 1
-        },
-        {
-            "source": "the cyberspace administration of china",
-            "target": "liu qing",
-            "weight": 1
-        },
-        {
-            "source": "the cyberspace administration of china",
-            "target": "cac",
-            "weight": 1
-        },
-        {
-            "source": "the cyberspace administration of china",
-            "target": "cheng wei",
-            "weight": 1
-        },
-        {
-            "source": "liu qing",
-            "target": "cac",
-            "weight": 1
-        },
-        {
-            "source": "liu qing",
-            "target": "cheng wei",
-            "weight": 1
-        },
-        {
-            "source": "cac",
-            "target": "cheng wei",
-            "weight": 1
-        },
-        {
-            "source": "alfredo h.",
-            "target": "the brussels criminal court\u2019s",
-            "weight": 1
-        },
-        {
-            "source": "alfredo h.",
-            "target": "majorca",
-            "weight": 1
-        },
-        {
-            "source": "the brussels criminal court\u2019s",
-            "target": "majorca",
-            "weight": 1
-        },
-        {
-            "source": "czk",
-            "target": "the chamber of deputies",
-            "weight": 1
-        },
-        {
-            "source": "czk",
-            "target": "feri",
-            "weight": 1
-        },
-        {
-            "source": "czk",
-            "target": "the prague metropolitan court",
-            "weight": 1
-        },
-        {
-            "source": "czk",
-            "target": "dominik feri",
-            "weight": 1
-        },
-        {
-            "source": "the chamber of deputies",
-            "target": "feri",
-            "weight": 1
-        },
-        {
-            "source": "the chamber of deputies",
-            "target": "the prague metropolitan court",
-            "weight": 1
-        },
-        {
-            "source": "the chamber of deputies",
-            "target": "dominik feri",
-            "weight": 1
-        },
-        {
-            "source": "feri",
-            "target": "the prague metropolitan court",
-            "weight": 1
-        },
-        {
-            "source": "feri",
-            "target": "dominik feri",
-            "weight": 1
-        },
-        {
-            "source": "the prague metropolitan court",
-            "target": "dominik feri",
-            "weight": 1
-        },
-        {
-            "source": "glostrup",
-            "target": "treasury",
-            "weight": 1
-        },
-        {
-            "source": "glostrup",
-            "target": "shah",
-            "weight": 1
-        },
-        {
-            "source": "glostrup",
-            "target": "sanjay shah",
-            "weight": 1
-        },
-        {
-            "source": "glostrup",
-            "target": "copenhagen",
-            "weight": 1
-        },
-        {
-            "source": "treasury",
-            "target": "shah",
-            "weight": 1
-        },
-        {
-            "source": "treasury",
-            "target": "sanjay shah",
-            "weight": 1
-        },
-        {
-            "source": "treasury",
-            "target": "copenhagen",
-            "weight": 1
-        },
-        {
-            "source": "shah",
-            "target": "sanjay shah",
-            "weight": 1
-        },
-        {
-            "source": "shah",
-            "target": "copenhagen",
-            "weight": 1
-        },
-        {
-            "source": "sanjay shah",
-            "target": "copenhagen",
-            "weight": 1
-        }
-    ]
-}
+                nodes: [
+                    {
+                        id: 'mara-louise anzalone',
+                        name: 'mara-louise anzalone',
+                    },
+                    {
+                        id: 'starbucks',
+                        name: 'starbucks',
+                    },
+                    {
+                        id: 'national labor relations board',
+                        name: 'national labor relations board',
+                    },
+                    {
+                        id: 'board',
+                        name: 'board',
+                    },
+                    {
+                        id: 'nlrb',
+                        name: 'nlrb',
+                    },
+                    {
+                        id: 'su',
+                        name: 'su',
+                    },
+                    {
+                        id: 'su wenqiang',
+                        name: 'su wenqiang',
+                    },
+                    {
+                        id: 'bukit timah',
+                        name: 'bukit timah',
+                    },
+                    {
+                        id: 'european union',
+                        name: 'european union',
+                    },
+                    {
+                        id: 'the european data protection board',
+                        name: 'the european data protection board',
+                    },
+                    {
+                        id: 'meta',
+                        name: 'meta',
+                    },
+                    {
+                        id: 'eu',
+                        name: 'eu',
+                    },
+                    {
+                        id: 'the irish data protection commission',
+                        name: 'the irish data protection commission',
+                    },
+                    {
+                        id: 'the general data protection regulation',
+                        name: 'the general data protection regulation',
+                    },
+                    {
+                        id: 'chapter 5',
+                        name: 'chapter 5',
+                    },
+                    {
+                        id: 'zhang',
+                        name: 'zhang',
+                    },
+                    {
+                        id: 'zhang ruijin',
+                        name: 'zhang ruijin',
+                    },
+                    {
+                        id: 'liberty university',
+                        name: 'liberty university',
+                    },
+                    {
+                        id: 'the clery act',
+                        name: 'the clery act',
+                    },
+                    {
+                        id: 'the department of education',
+                        name: 'the department of education',
+                    },
+                    {
+                        id: 'kurz',
+                        name: 'kurz',
+                    },
+                    {
+                        id: "the austrian people's party",
+                        name: "the austrian people's party",
+                    },
+                    {
+                        id: 'sebastian kurz',
+                        name: 'sebastian kurz',
+                    },
+                    {
+                        id: 'didi',
+                        name: 'didi',
+                    },
+                    {
+                        id: 'jean liu',
+                        name: 'jean liu',
+                    },
+                    {
+                        id: 'didi global',
+                        name: 'didi global',
+                    },
+                    {
+                        id: 'the cyberspace administration of china',
+                        name: 'the cyberspace administration of china',
+                    },
+                    {
+                        id: 'liu qing',
+                        name: 'liu qing',
+                    },
+                    {
+                        id: 'cac',
+                        name: 'cac',
+                    },
+                    {
+                        id: 'cheng wei',
+                        name: 'cheng wei',
+                    },
+                    {
+                        id: 'alfredo h.',
+                        name: 'alfredo h.',
+                    },
+                    {
+                        id: 'the brussels criminal court\u2019s',
+                        name: 'the brussels criminal court\u2019s',
+                    },
+                    {
+                        id: 'majorca',
+                        name: 'majorca',
+                    },
+                    {
+                        id: 'czk',
+                        name: 'czk',
+                    },
+                    {
+                        id: 'the chamber of deputies',
+                        name: 'the chamber of deputies',
+                    },
+                    {
+                        id: 'feri',
+                        name: 'feri',
+                    },
+                    {
+                        id: 'the prague metropolitan court',
+                        name: 'the prague metropolitan court',
+                    },
+                    {
+                        id: 'dominik feri',
+                        name: 'dominik feri',
+                    },
+                    {
+                        id: 'glostrup',
+                        name: 'glostrup',
+                    },
+                    {
+                        id: 'treasury',
+                        name: 'treasury',
+                    },
+                    {
+                        id: 'shah',
+                        name: 'shah',
+                    },
+                    {
+                        id: 'sanjay shah',
+                        name: 'sanjay shah',
+                    },
+                    {
+                        id: 'copenhagen',
+                        name: 'copenhagen',
+                    },
+                ],
+                edges: [
+                    {
+                        source: 'mara-louise anzalone',
+                        target: 'starbucks',
+                        weight: 1,
+                    },
+                    {
+                        source: 'mara-louise anzalone',
+                        target: 'national labor relations board',
+                        weight: 1,
+                    },
+                    {
+                        source: 'mara-louise anzalone',
+                        target: 'board',
+                        weight: 1,
+                    },
+                    {
+                        source: 'mara-louise anzalone',
+                        target: 'nlrb',
+                        weight: 1,
+                    },
+                    {
+                        source: 'starbucks',
+                        target: 'national labor relations board',
+                        weight: 1,
+                    },
+                    {
+                        source: 'starbucks',
+                        target: 'board',
+                        weight: 1,
+                    },
+                    {
+                        source: 'starbucks',
+                        target: 'nlrb',
+                        weight: 1,
+                    },
+                    {
+                        source: 'national labor relations board',
+                        target: 'board',
+                        weight: 1,
+                    },
+                    {
+                        source: 'national labor relations board',
+                        target: 'nlrb',
+                        weight: 1,
+                    },
+                    {
+                        source: 'board',
+                        target: 'nlrb',
+                        weight: 1,
+                    },
+                    {
+                        source: 'su',
+                        target: 'su wenqiang',
+                        weight: 1,
+                    },
+                    {
+                        source: 'su',
+                        target: 'bukit timah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'su wenqiang',
+                        target: 'bukit timah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'european union',
+                        target: 'the european data protection board',
+                        weight: 1,
+                    },
+                    {
+                        source: 'european union',
+                        target: 'meta',
+                        weight: 1,
+                    },
+                    {
+                        source: 'european union',
+                        target: 'eu',
+                        weight: 1,
+                    },
+                    {
+                        source: 'european union',
+                        target: 'the irish data protection commission',
+                        weight: 1,
+                    },
+                    {
+                        source: 'european union',
+                        target: 'the general data protection regulation',
+                        weight: 1,
+                    },
+                    {
+                        source: 'european union',
+                        target: 'chapter 5',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the european data protection board',
+                        target: 'meta',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the european data protection board',
+                        target: 'eu',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the european data protection board',
+                        target: 'the irish data protection commission',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the european data protection board',
+                        target: 'the general data protection regulation',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the european data protection board',
+                        target: 'chapter 5',
+                        weight: 1,
+                    },
+                    {
+                        source: 'meta',
+                        target: 'eu',
+                        weight: 1,
+                    },
+                    {
+                        source: 'meta',
+                        target: 'the irish data protection commission',
+                        weight: 1,
+                    },
+                    {
+                        source: 'meta',
+                        target: 'the general data protection regulation',
+                        weight: 1,
+                    },
+                    {
+                        source: 'meta',
+                        target: 'chapter 5',
+                        weight: 1,
+                    },
+                    {
+                        source: 'eu',
+                        target: 'the irish data protection commission',
+                        weight: 1,
+                    },
+                    {
+                        source: 'eu',
+                        target: 'the general data protection regulation',
+                        weight: 1,
+                    },
+                    {
+                        source: 'eu',
+                        target: 'chapter 5',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the irish data protection commission',
+                        target: 'the general data protection regulation',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the irish data protection commission',
+                        target: 'chapter 5',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the general data protection regulation',
+                        target: 'chapter 5',
+                        weight: 1,
+                    },
+                    {
+                        source: 'zhang',
+                        target: 'zhang ruijin',
+                        weight: 1,
+                    },
+                    {
+                        source: 'liberty university',
+                        target: 'the clery act',
+                        weight: 1,
+                    },
+                    {
+                        source: 'liberty university',
+                        target: 'the department of education',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the clery act',
+                        target: 'the department of education',
+                        weight: 1,
+                    },
+                    {
+                        source: 'kurz',
+                        target: "the austrian people's party",
+                        weight: 1,
+                    },
+                    {
+                        source: 'kurz',
+                        target: 'sebastian kurz',
+                        weight: 1,
+                    },
+                    {
+                        source: "the austrian people's party",
+                        target: 'sebastian kurz',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi',
+                        target: 'jean liu',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi',
+                        target: 'didi global',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi',
+                        target: 'the cyberspace administration of china',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi',
+                        target: 'liu qing',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi',
+                        target: 'cac',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi',
+                        target: 'cheng wei',
+                        weight: 1,
+                    },
+                    {
+                        source: 'jean liu',
+                        target: 'didi global',
+                        weight: 1,
+                    },
+                    {
+                        source: 'jean liu',
+                        target: 'the cyberspace administration of china',
+                        weight: 1,
+                    },
+                    {
+                        source: 'jean liu',
+                        target: 'liu qing',
+                        weight: 1,
+                    },
+                    {
+                        source: 'jean liu',
+                        target: 'cac',
+                        weight: 1,
+                    },
+                    {
+                        source: 'jean liu',
+                        target: 'cheng wei',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi global',
+                        target: 'the cyberspace administration of china',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi global',
+                        target: 'liu qing',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi global',
+                        target: 'cac',
+                        weight: 1,
+                    },
+                    {
+                        source: 'didi global',
+                        target: 'cheng wei',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the cyberspace administration of china',
+                        target: 'liu qing',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the cyberspace administration of china',
+                        target: 'cac',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the cyberspace administration of china',
+                        target: 'cheng wei',
+                        weight: 1,
+                    },
+                    {
+                        source: 'liu qing',
+                        target: 'cac',
+                        weight: 1,
+                    },
+                    {
+                        source: 'liu qing',
+                        target: 'cheng wei',
+                        weight: 1,
+                    },
+                    {
+                        source: 'cac',
+                        target: 'cheng wei',
+                        weight: 1,
+                    },
+                    {
+                        source: 'alfredo h.',
+                        target: 'the brussels criminal court\u2019s',
+                        weight: 1,
+                    },
+                    {
+                        source: 'alfredo h.',
+                        target: 'majorca',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the brussels criminal court\u2019s',
+                        target: 'majorca',
+                        weight: 1,
+                    },
+                    {
+                        source: 'czk',
+                        target: 'the chamber of deputies',
+                        weight: 1,
+                    },
+                    {
+                        source: 'czk',
+                        target: 'feri',
+                        weight: 1,
+                    },
+                    {
+                        source: 'czk',
+                        target: 'the prague metropolitan court',
+                        weight: 1,
+                    },
+                    {
+                        source: 'czk',
+                        target: 'dominik feri',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the chamber of deputies',
+                        target: 'feri',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the chamber of deputies',
+                        target: 'the prague metropolitan court',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the chamber of deputies',
+                        target: 'dominik feri',
+                        weight: 1,
+                    },
+                    {
+                        source: 'feri',
+                        target: 'the prague metropolitan court',
+                        weight: 1,
+                    },
+                    {
+                        source: 'feri',
+                        target: 'dominik feri',
+                        weight: 1,
+                    },
+                    {
+                        source: 'the prague metropolitan court',
+                        target: 'dominik feri',
+                        weight: 1,
+                    },
+                    {
+                        source: 'glostrup',
+                        target: 'treasury',
+                        weight: 1,
+                    },
+                    {
+                        source: 'glostrup',
+                        target: 'shah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'glostrup',
+                        target: 'sanjay shah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'glostrup',
+                        target: 'copenhagen',
+                        weight: 1,
+                    },
+                    {
+                        source: 'treasury',
+                        target: 'shah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'treasury',
+                        target: 'sanjay shah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'treasury',
+                        target: 'copenhagen',
+                        weight: 1,
+                    },
+                    {
+                        source: 'shah',
+                        target: 'sanjay shah',
+                        weight: 1,
+                    },
+                    {
+                        source: 'shah',
+                        target: 'copenhagen',
+                        weight: 1,
+                    },
+                    {
+                        source: 'sanjay shah',
+                        target: 'copenhagen',
+                        weight: 1,
+                    },
+                ],
+            };
 
-            // Function to create the network diagram
-            function createNetwork(data) {
-                const width = 800;
-                const height = 600;
+            const width = 800;
+            const height = 600;
 
-                // Create the SVG container
-                const svg = d3
-                    .select('#network')
-                    .append('svg')
-                    .attr('width', width)
-                    .attr('height', height);
+            // Create SVG container
+            const svg = d3
+                .select('body')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
 
-                // Create the simulation
-                const simulation = d3
-                    .forceSimulation(data.nodes)
-                    .force(
-                        'link',
-                        d3
-                            .forceLink(data.links)
-                            .id((d) => d.id)
-                            .distance(150)
-                    )
-                    .force('charge', d3.forceManyBody().strength(-200))
-                    .force('center', d3.forceCenter(width / 2, height / 2));
+            // Create a simulation for force-directed layout
+            const simulation = d3
+                .forceSimulation(data.nodes)
+                .force(
+                    'link',
+                    d3
+                        .forceLink(data.edges)
+                        .id((d) => d.id)
+                        .distance(100)
+                )
+                .force('charge', d3.forceManyBody().strength(-300))
+                .force('center', d3.forceCenter(width / 2, height / 2));
 
-                // Add links (edges)
-                const link = svg
-                    .append('g')
-                    .selectAll('.link')
-                    .data(data.links)
-                    .enter()
-                    .append('line')
-                    .attr('class', 'link')
-                    .style('stroke', '#aaa')
-                    .style('stroke-width', 2);
+            // Add links (edges)
+            const link = svg
+                .append('g')
+                .attr('class', 'links')
+                .selectAll('line')
+                .data(data.edges)
+                .enter()
+                .append('line')
+                .attr('class', 'link')
+                .attr('stroke-width', (d) => Math.sqrt(d.weight));
 
-                // Add nodes (circles)
-                const node = svg
-                    .append('g')
-                    .selectAll('.node')
-                    .data(data.nodes)
-                    .enter()
-                    .append('circle')
-                    .attr('class', 'node')
-                    .attr('r', 20)
-                    .style('fill', '#ff6347')
-                    .call(
-                        d3
-                            .drag()
-                            .on('start', dragstart)
-                            .on('drag', dragged)
-                            .on('end', dragend)
-                    );
+            // Add nodes
+            const node = svg
+                .append('g')
+                .attr('class', 'nodes')
+                .selectAll('g')
+                .data(data.nodes)
+                .enter()
+                .append('g');
 
-                // Add labels
-                const label = svg
-                    .append('g')
-                    .selectAll('.label')
-                    .data(data.nodes)
-                    .enter()
-                    .append('text')
-                    .attr('class', 'label')
-                    .attr('dx', 25)
-                    .attr('dy', 5)
-                    .text((d) => d.name);
+            node.append('circle').attr('r', 10).attr('fill', 'skyblue');
 
-                // Update positions on each simulation tick
-                simulation.on('tick', () => {
-                    link.attr('x1', (d) => d.source.x)
-                        .attr('y1', (d) => d.source.y)
-                        .attr('x2', (d) => d.target.x)
-                        .attr('y2', (d) => d.target.y);
+            node.append('text')
+                .attr('x', 12)
+                .attr('y', 3)
+                .text((d) => d.name);
 
-                    node.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
+            // Simulation tick function
+            simulation.on('tick', () => {
+                link.attr('x1', (d) => d.source.x)
+                    .attr('y1', (d) => d.source.y)
+                    .attr('x2', (d) => d.target.x)
+                    .attr('y2', (d) => d.target.y);
 
-                    label.attr('x', (d) => d.x).attr('y', (d) => d.y);
-                });
+                node.attr('transform', (d) => `translate(${d.x},${d.y})`);
+            });
 
-                // Dragging functions
-                function dragstart(event, d) {
+            // Drag functionality
+            const drag = d3
+                .drag()
+                .on('start', (event, d) => {
                     if (!event.active) simulation.alphaTarget(0.3).restart();
                     d.fx = d.x;
                     d.fy = d.y;
-                }
-
-                function dragged(event, d) {
+                })
+                .on('drag', (event, d) => {
                     d.fx = event.x;
                     d.fy = event.y;
-                }
-
-                function dragend(event, d) {
+                })
+                .on('end', (event, d) => {
                     if (!event.active) simulation.alphaTarget(0);
                     d.fx = null;
                     d.fy = null;
-                }
-            }
+                });
 
-            // Call the function with the pre-given data
-            createNetwork(data);
+            node.call(drag);
         </script>
     </body>
 </html>
