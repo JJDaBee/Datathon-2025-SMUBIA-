@@ -41,18 +41,20 @@
         <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.3/build/d3.layout.cloud.js"></script>
 
         <script>
-            // Load the JSON data
-            d3.json('/cooccurrence_network.json').then(function (data) {
+            async function createNetwork() {
+                const data = await d3.json('public/cooccurrence_network.json');
+
                 const width = 800;
                 const height = 600;
 
-                // Create the SVG container
+                // Create the SVG container where the network diagram will be rendered
                 const svg = d3
                     .select('#network')
+                    .append('svg')
                     .attr('width', width)
                     .attr('height', height);
 
-                // Create a simulation for force-directed graph layout
+                // Create the simulation for the force-directed graph layout
                 const simulation = d3
                     .forceSimulation(data.nodes)
                     .force(
@@ -72,9 +74,11 @@
                     .data(data.links)
                     .enter()
                     .append('line')
-                    .attr('class', 'link');
+                    .attr('class', 'link')
+                    .style('stroke', '#aaa')
+                    .style('stroke-width', 2);
 
-                // Add nodes (entities)
+                // Add nodes (circles representing entities)
                 const node = svg
                     .append('g')
                     .selectAll('.node')
@@ -92,7 +96,7 @@
                             .on('end', dragend)
                     );
 
-                // Add labels to nodes (entities)
+                // Add labels to nodes
                 const label = svg
                     .append('g')
                     .selectAll('.label')
@@ -102,7 +106,7 @@
                     .attr('class', 'label')
                     .attr('dx', 25)
                     .attr('dy', 5)
-                    .text((d) => d.id);
+                    .text((d) => d.name); // Display node's name
 
                 // Update positions of nodes and links on each tick of the simulation
                 simulation.on('tick', function () {
@@ -133,7 +137,10 @@
                     d.fx = null;
                     d.fy = null;
                 }
-            });
+            }
+
+            // Call the function to create the network diagram
+            createNetwork();
         </script>
     </body>
 </html>
