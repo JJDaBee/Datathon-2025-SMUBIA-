@@ -3,138 +3,137 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Network Diagram with D3.js</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-            }
+        <title>Network Diagram, Word Cloud, and Charts</title>
 
-            #network {
-                width: 100%;
-                height: 600px;
-                border: 1px solid #ccc;
-                margin-top: 20px;
-            }
-        </style>
+        <!-- Add Bootstrap for layout and styling -->
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts for better typography -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+
+        <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
-        <h1>Network Diagram with D3.js</h1>
+        <h1>Network Diagram, Word Cloud, and Charts</h1>
 
-        <!-- This is where the network diagram will be rendered -->
-        <div id="network"></div>
+        <div class="container">
+            <!-- Left Side: Network Diagram -->
+            <div id="network"></div>
+
+            <!-- Right Side: Word Cloud and Charts -->
+            <div id="right-container">
+                <!-- Word Cloud -->
+                <div id="word-cloud"></div>
+
+                <!-- Charts -->
+                <div id="charts"></div>
+            </div>
+        </div>
 
         <!-- Load D3.js -->
         <script src="https://d3js.org/d3.v5.min.js"></script>
+        <!-- For Word Cloud (d3-cloud library) -->
+        <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.3/build/d3.layout.cloud.js"></script>
 
-        <!-- Your custom JavaScript will go here -->
         <script>
-            // Create a simple dataset for the network diagram
-            const nodes = [
-                { id: 1, name: 'Node 1' },
-                { id: 2, name: 'Node 2' },
-                { id: 3, name: 'Node 3' },
-                { id: 4, name: 'Node 4' },
-            ];
+            // Load the JSON data
+            d3.json('cooccurrence_network.json').then(function (data) {
+                const width = 800;
+                const height = 600;
 
-            const links = [
-                { source: 1, target: 2 },
-                { source: 2, target: 3 },
-                { source: 3, target: 4 },
-                { source: 4, target: 1 },
-            ];
+                // Create the SVG container
+                const svg = d3
+                    .select('#network')
+                    .attr('width', width)
+                    .attr('height', height);
 
-            // Set up the dimensions for the SVG container
-            const width = 800;
-            const height = 600;
+                // Create a simulation for force-directed graph layout
+                const simulation = d3
+                    .forceSimulation(data.nodes)
+                    .force(
+                        'link',
+                        d3
+                            .forceLink(data.links)
+                            .id((d) => d.id)
+                            .distance(150)
+                    )
+                    .force('charge', d3.forceManyBody().strength(-200))
+                    .force('center', d3.forceCenter(width / 2, height / 2));
 
-            // Create the SVG container where the network will be drawn
-            const svg = d3
-                .select('#network')
-                .append('svg')
-                .attr('width', width)
-                .attr('height', height);
+                // Add links (edges) between nodes
+                const link = svg
+                    .append('g')
+                    .selectAll('.link')
+                    .data(data.links)
+                    .enter()
+                    .append('line')
+                    .attr('class', 'link');
 
-            // Create the simulation for force-directed layout
-            const simulation = d3
-                .forceSimulation(nodes)
-                .force(
-                    'link',
-                    d3
-                        .forceLink(links)
-                        .id((d) => d.id)
-                        .distance(150)
-                )
-                .force('charge', d3.forceManyBody().strength(-200))
-                .force('center', d3.forceCenter(width / 2, height / 2));
+                // Add nodes (entities)
+                const node = svg
+                    .append('g')
+                    .selectAll('.node')
+                    .data(data.nodes)
+                    .enter()
+                    .append('circle')
+                    .attr('class', 'node')
+                    .attr('r', 20)
+                    .style('fill', '#ff6347')
+                    .call(
+                        d3
+                            .drag()
+                            .on('start', dragstart)
+                            .on('drag', dragged)
+                            .on('end', dragend)
+                    );
 
-            // Add links (edges) between nodes
-            const link = svg
-                .selectAll('.link')
-                .data(links)
-                .enter()
-                .append('line')
-                .attr('class', 'link')
-                .style('stroke', '#aaa')
-                .style('stroke-width', 2);
+                // Add labels to nodes (entities)
+                const label = svg
+                    .append('g')
+                    .selectAll('.label')
+                    .data(data.nodes)
+                    .enter()
+                    .append('text')
+                    .attr('class', 'label')
+                    .attr('dx', 25)
+                    .attr('dy', 5)
+                    .text((d) => d.id);
 
-            // Add nodes (circles)
-            const node = svg
-                .selectAll('.node')
-                .data(nodes)
-                .enter()
-                .append('circle')
-                .attr('class', 'node')
-                .attr('r', 20)
-                .style('fill', '#ff6347')
-                .call(
-                    d3
-                        .drag()
-                        .on('start', dragstart)
-                        .on('drag', dragged)
-                        .on('end', dragend)
-                );
+                // Update positions of nodes and links on each tick of the simulation
+                simulation.on('tick', function () {
+                    link.attr('x1', (d) => d.source.x)
+                        .attr('y1', (d) => d.source.y)
+                        .attr('x2', (d) => d.target.x)
+                        .attr('y2', (d) => d.target.y);
 
-            // Add labels to nodes
-            const label = svg
-                .selectAll('.label')
-                .data(nodes)
-                .enter()
-                .append('text')
-                .attr('class', 'label')
-                .attr('dx', 25)
-                .attr('dy', 5)
-                .text((d) => d.name);
+                    node.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
 
-            // Update the positions of the nodes and links on each tick
-            simulation.on('tick', () => {
-                link.attr('x1', (d) => d.source.x)
-                    .attr('y1', (d) => d.source.y)
-                    .attr('x2', (d) => d.target.x)
-                    .attr('y2', (d) => d.target.y);
+                    label.attr('x', (d) => d.x).attr('y', (d) => d.y);
+                });
 
-                node.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
+                // Dragging functions to allow interaction with nodes
+                function dragstart(event, d) {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    d.fx = d.x;
+                    d.fy = d.y;
+                }
 
-                label.attr('x', (d) => d.x).attr('y', (d) => d.y);
+                function dragged(event, d) {
+                    d.fx = event.x;
+                    d.fy = event.y;
+                }
+
+                function dragend(event, d) {
+                    if (!event.active) simulation.alphaTarget(0);
+                    d.fx = null;
+                    d.fy = null;
+                }
             });
-
-            // Drag functions to allow interaction with nodes
-            function dragstart(event, d) {
-                if (!event.active) simulation.alphaTarget(0.3).restart();
-                d.fx = d.x;
-                d.fy = d.y;
-            }
-
-            function dragged(event, d) {
-                d.fx = event.x;
-                d.fy = event.y;
-            }
-
-            function dragend(event, d) {
-                if (!event.active) simulation.alphaTarget(0);
-                d.fx = null;
-                d.fy = null;
-            }
         </script>
     </body>
 </html>

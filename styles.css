@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #f3f4f6, #e0e0e0);
+    padding: 20px;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Flexbox layout for the left and right side */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left container (Network Diagram) */
+#network {
+    flex: 1;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Right container (Word Cloud and Charts) */
+#right-container {
+    flex: 1;
+    max-width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Word Cloud Container */
+#word-cloud {
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Container (e.g., bar chart, pie chart) */
+#charts {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects for nodes */
+.node:hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    fill: #4caf50;
+    r: 30;
+}
+
+/* Card style for the chart containers */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    font-size: 1.25rem;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 15px;
+}
